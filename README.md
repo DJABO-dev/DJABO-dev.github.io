@@ -1,37 +1,36 @@
 # DJABO-dev.github.io
 Denon Engine DJ App workaround to synchronize Playlists in LINUX
 
-AppImage EngineSynchronize-x86_64.AppImage
+All work is done!
 
-First version is completed. Now it can transfer playlist from music folder of user to any USB drive, including STEMS and SOUNDSWITCH FILES. Or from one USB drive to another.
+This program is designed to sync playlists, smartlists, tracks files, stem files and SoundSwitch files between internal or external drives and performance decks with internal storage to work with Engine Library properly in Linux environment.
 
-First of all, I’ve created a way to recognize USB drives. This can be made pushing a button. The USB drives then become selectionable from the combobox controls. When you do this, you get the content of Engine database in that drive.
+Engine DJ software run well with wine in Linux, but it can't sync anything. USB drives are not present on the interface and them can't be used to sync.
 
-Here is a short video to show it:
+This program is an external tool that allows the synchronization of libraries between external and internal drives so that Engine DJ can be used in Linux environment in a complete way.
 
-https://ant.japiworld.com:5443/WebRTCApp/streams/247758961056920249497381.mp4
+This is the final version 1.1
 
-The next thing is to create a empy database if you select a drive where there is no Engine Library folder. This database is a copy of Library folder when you just installed the software.
+News:
 
-Again, here is a short video of this:
+1 - Added synchronize from and to any mounted drives. USB and hard disk drives. To anybody who has his library in a secondary internal disk.
 
-https://ant.japiworld.com:5443/WebRTCApp/streams/954139798241363817310321.mp4
+2 - Added a system to find real route to track when it's marked as red in Engine DJ. This can update path info in the db file by file or all files at same time. This only search inside the same drive of original path. This can't find tracks with filename changed. This is a speedy way to update path. No search by metadata. Procedure: Select playlist and clic on see tracks button. You will see a window with the playlist selected. Open it and you will see the list of tracks. If some of them are red you can clic button repair reds on the upper right corner. Otherwise the button will be disabled. You will be asked if you want repair one by one or all at the same time.
 
-Next, you have a origin database from a USB drive. And want to synchronize some Playlist to a USB stick. Or have a USB drive with Playlists and want to synchronize to user music folder of PC. You only need to select the desired Playlist from the left, push procesing button and then push Sinchronize button. You need to select some database on the right side (obviously). Remember, always LEFT TO RIGHT.
+3 - Added a system to synchronize SmartList. SmartList only can be read by Engine DJ from home music folder of user, but now you can transfer it to any drive and then transfer it to home library music folder in any other PC.
 
-Video:
+4 - Updated system to synchronize home music folder from external drives. When you use a external drive and open Engine Dj, the database is copied to home music library folder, but these playlists are marked as not persisted  and they won't be visible on Engine DJ software. Now, if you synchronize from external drive to internal library, these playlists are marked as persisted in database to make them accesible when you don't have external drive connected. Tracks, stem files and SoundSwitch files will be transfered. In the GUI, the playlists than have been transfered to home user library but they won´t be visible by Engine DJ software are marked with forbiden simbol 📛. This only work when destination of sync is home music library folder. (Stay in right side of GUI)
 
-https://ant.japiworld.com:5443/WebRTCApp/streams/882780550710418896075422.mp4
+5 - Playlists are marked with 📀 simbol when not selected, and those selected to sync are marked with ✅. You don't need to mark anything in right side to sync. Righ side marking is to see list of tracks of every playlist selected and repair red ones in case. You can see track list on both, left side and right side and repair them in case with the same procedure.
 
-And finaly, you have changed CUES and LOOPS from one USB drive (or any other drive), and want to send these changes to another performance USB drive previusly synchronized. When you select from the left the playlist changed, and have the same Playlist on the right, you can go in the same way to sync this Playlist and select it from the left. No need to select anything on the right. Proccess and Synchronize. The Playlist will be updated with the new performance data from the updated info on the left.
+5 - Solved some issues with buttons activations.
 
-In this video I show you this process. First I set some CUES and LOOP to a track on “DJ_BACKUP” USB drive from Engine DJ software. Then you can see than these CUES and LOOP are not on “DENON_DJ” usb drive (Unmount DJ_BACKUP drive, and mount DENON_DJ drive) then, I open again Engine DJ. Once the units are both mounted, I put the changed library on the left (DJ_BACKUP) and unchanged library on the right (DENON_DJ) and sychronize them.
+If anyone finds any errors, please let me know. If anyone can improve the code, please share it with everyone.
 
-Now, library on DENON_DJ have the same CUES and LOOP. The library on the right has been updated with the info from the library on the left selected Playlist.
+That's all. I sincerely hope that this tool will be useful to people who are having problems with the database, playlist synchronization and annoying red files. And if I encourage anyone to use Linux, I'll be happy to hear about it.
 
-https://ant.japiworld.com:5443/WebRTCApp/streams/178193795903407661501845.mp4
+Thank you very much.
+Regards.
 
-Warnings:
-You’ll never change anything of the left selected library. Only the right selection will be altered. This is a important tip if you want to test it.
 
-This program only (by now) can add data to the right selected library. To delete a Playlist you can use Engine Dj directly on Linux (with wine).
+
