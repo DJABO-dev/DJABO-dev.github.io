@@ -9,7 +9,7 @@ Engine DJ software run well with wine in Linux, but it can't sync anything. USB 
 
 This program is an external tool that allows the synchronization of libraries between external and internal drives so that Engine DJ can be used in Linux environment in a complete way.
 
-This is the final version 1.1
+This is the final version 1.1.2
 
 News:
 
@@ -23,7 +23,10 @@ News:
 
 5 - Playlists are marked with 📀 simbol when not selected, and those selected to sync are marked with ✅. You don't need to mark anything in right side to sync. Righ side marking is to see list of tracks of every playlist selected and repair red ones in case. You can see track list on both, left side and right side and repair them in case with the same procedure.
 
-5 - Solved some issues with buttons activations.
+6 - Solved some issues with buttons activations.
+
+7 - Added support to see history in performance databases. It can be opened and then you can save the list of tracks to a text file. History list can't be transfered. No sync to this. 
+
 
 If anyone finds any errors, please let me know. If anyone can improve the code, please share it with everyone.
 
